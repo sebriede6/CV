@@ -1,19 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/cv/', // Basis-URL für die Unterseite (z. B. /cv/ für GitHub Pages)
+  base: '/cv/', 
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
   build: {
-    outDir: 'dist', // Ausgabeordner für den Build
-    assetsDir: 'assets', // Ordner für statische Dateien
+    outDir: 'dist', 
+    assetsDir: 'assets', 
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[hash][extname]', // Struktur für Assets
+        assetFileNames: 'assets/[name].[hash][extname]', 
         chunkFileNames: 'assets/[name].[hash].js',
         entryFileNames: 'assets/[name].[hash].js',
       },
